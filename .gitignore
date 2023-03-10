@@ -25,6 +25,9 @@
 *.la
 *.a
 *.lib
+*.log
+*.command.1.tlog
+*.tlog
 
 # Executables
 *.exe
@@ -49,6 +52,10 @@
 *.userprefs
 
 # Build results
+
+*/bin[*]int/
+*/bin/
+
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -59,6 +66,9 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+ThunderSHIEngine/bin[*]int/Debug[*]x64/ThunderSHIEngine
+ThunderSHIEngine/bin-int/Debug-x64/SandBox
+ThunderSHIEngine/bin-int/Debug-x64/ThunderSHIEngine
 
 # Visual Studio 2019 cache/options directory
 .vs/
