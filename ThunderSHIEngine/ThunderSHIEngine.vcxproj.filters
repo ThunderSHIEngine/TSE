@@ -27,9 +27,15 @@
     <ClInclude Include="src\Thunder\EntryPoint.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\Thunder\Log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Thunder\Application.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Thunder\Log.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
