@@ -1,0 +1,3 @@
+[submodule "ThunderSHIEngine/vendor/spdlog"]
+	path = ThunderSHIEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
