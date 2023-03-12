@@ -1,6 +1,6 @@
 #pragma once
 #include "Core.h"
-
+#include "Events/Event.h"
 namespace Thunder
 {
 	class THUNDER_API Application

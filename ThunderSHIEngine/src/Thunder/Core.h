@@ -11,3 +11,5 @@
 	#error Thunder only support windows£¡
 #endif  //TE_PLATFORM_WINDOWS
 
+#define BIT(x) (1<<x)
+

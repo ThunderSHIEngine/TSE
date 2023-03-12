@@ -32,13 +32,14 @@ project "ThunderSHIEngine"
 
 	includedirs
 	{
-		"%{prj.name}/vendor/spdlog/include";
+		"%{prj.name}/src",
+		"%{prj.name}/vendor/spdlog/include"
 	}
 
 	filter "system:windows"
 		cppdialect"c++17"
 		staticruntime "on"
-		systemversion "10.0"
+		systemversion "latest"
 		defines
 		{
 			"TE_PLATFORM_WINDOWS",
@@ -78,8 +79,8 @@ project "SandBox"
 
 	includedirs
 	{
-		"ThunderSHIEngine/vendor/spdlog/include";
-		"ThunderSHIEngine/src";
+		"ThunderSHIEngine/vendor/spdlog/include",
+		"ThunderSHIEngine/src"
 	}
 
 	links
@@ -90,7 +91,7 @@ project "SandBox"
 	filter "system:windows"
 		cppdialect"c++17"
 		staticruntime "on"
-		systemversion "10.0"
+		systemversion "latest"
 		defines
 		{
 			"TE_PLATFORM_WINDOWS",
