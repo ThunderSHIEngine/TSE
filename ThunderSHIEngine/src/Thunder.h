@@ -2,6 +2,7 @@
 //for use by Thunder applications
 
 #include "Thunder/Application.h"
+#include "Thunder/Layer.h"
 #include "Thunder/Log.h"
 
 // ----Entry Point--------------

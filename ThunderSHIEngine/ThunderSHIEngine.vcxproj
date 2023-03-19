@@ -84,6 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -129,6 +130,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -152,6 +154,8 @@
     <ClInclude Include="src\Thunder\Events\Event.h" />
     <ClInclude Include="src\Thunder\Events\KeyEvent.h" />
     <ClInclude Include="src\Thunder\Events\MouseEvent.h" />
+    <ClInclude Include="src\Thunder\Layer.h" />
+    <ClInclude Include="src\Thunder\LayerStack.h" />
     <ClInclude Include="src\Thunder\Log.h" />
     <ClInclude Include="src\Thunder\Window.h" />
     <ClInclude Include="src\tepch.h" />
@@ -159,6 +163,8 @@
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Thunder\Application.cpp" />
+    <ClCompile Include="src\Thunder\Layer.cpp" />
+    <ClCompile Include="src\Thunder\LayerStack.cpp" />
     <ClCompile Include="src\Thunder\Log.cpp" />
     <ClCompile Include="src\Thunder\Window.cpp" />
     <ClCompile Include="src\tepch.cpp">

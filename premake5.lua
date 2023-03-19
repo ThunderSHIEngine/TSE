@@ -67,14 +67,17 @@ project "ThunderSHIEngine"
 
 	filter "configurations:Debug"
 		defines "TE_DEBUG"
+		buildoptions "/MDd"
 		symbols "ON"	
 		
 	filter "configurations:Rlease"
 		defines "TE_RELEASE"
+		buildoptions "/MDd"
 		optimize "ON"	
 		
 	filter "configurations:Dist"
 		defines "TE_DIST"
+		buildoptions "/MDd"
 		optimize "ON"
 
 project "SandBox"
@@ -114,12 +117,15 @@ project "SandBox"
 
 	filter "configurations:Debug"
 		defines "TE_DEBUG"
+		buildoptions "/MDd"
 		symbols "ON"	
 		
 	filter "configurations:Rlease"
 		defines "TE_RELEASE"
+		buildoptions "/MDd"
 		optimize "ON"	
 		
 	filter "configurations:Dist"
 		defines "TE_DIST"
+		buildoptions "/MDd"
 		optimize "ON"
