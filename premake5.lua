@@ -15,6 +15,12 @@ workspace "ThunderSHIEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "ThunderSHIEngine/vendor/GLFW/include"
+
+include "ThunderSHIEngine/vendor/GLFW"
+
 project "ThunderSHIEngine"
 	location "ThunderSHIEngine"
 	kind "SharedLib"
@@ -22,6 +28,9 @@ project "ThunderSHIEngine"
 
 	targetdir("bin/" .. outputdir .. "/%{prj.name}")
 	objdir("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "tepch.h"
+	pchsource "ThunderSHIEngine/src/tepch.cpp"
 
 	files
 	{
@@ -33,9 +42,14 @@ project "ThunderSHIEngine"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
 	}
-
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
+	}
 	filter "system:windows"
 		cppdialect"c++17"
 		staticruntime "on"

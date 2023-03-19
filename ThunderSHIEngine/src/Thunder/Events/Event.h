@@ -1,11 +1,11 @@
 #pragma once
+#include "tepch.h"
 
 //#include "Hazel/Debug/Instrumentor.h"
 //#include "Hazel/Core/Base.h"
 
 #include "Thunder/Core.h"
-#include <string>
-#include <functional>
+
 
 namespace Thunder {
 
