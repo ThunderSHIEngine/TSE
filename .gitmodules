@@ -1,3 +1,6 @@
 [submodule "ThunderSHIEngine/vendor/spdlog"]
 	path = ThunderSHIEngine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "ThunderSHIEngine/vendor/GLFW"]
+	path = ThunderSHIEngine/vendor/GLFW
+	url = https://github.com/TheCherno/glfw
