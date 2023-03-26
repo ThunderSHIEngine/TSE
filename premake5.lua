@@ -18,8 +18,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "ThunderSHIEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "ThunderSHIEngine/vendor/Glad/include"
 
 include "ThunderSHIEngine/vendor/GLFW"
+include "ThunderSHIEngine/vendor/Glad"
 
 project "ThunderSHIEngine"
 	location "ThunderSHIEngine"
@@ -43,11 +45,13 @@ project "ThunderSHIEngine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 	filter "system:windows"
@@ -57,7 +61,8 @@ project "ThunderSHIEngine"
 		defines
 		{
 			"TE_PLATFORM_WINDOWS",
-			"TE_BUILD_DLL"
+			"TE_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 	postbuildcommands

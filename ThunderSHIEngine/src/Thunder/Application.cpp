@@ -2,6 +2,7 @@
 #include "Application.h"
 #include "Log.h"
 #include <GLFW/glfw3.h>
+#include "glad/glad.h"
 
 namespace Thunder
 {
@@ -11,6 +12,9 @@ namespace Thunder
 	{
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
+
+
+
 	}
 
 	Application::~Application()
@@ -40,7 +44,7 @@ namespace Thunder
 		//TE_CLIENT_TACE(e);
 		while (m_Runing)
 		{
-			glClearColor(0.5, 0.6, 0.6, 0.5);
+			glClearColor(0.6, 0.6, 0.9, 0.5);
 			glClear(GL_COLOR_BUFFER_BIT);
 
 			for (Layer* layer : m_LayerStack)
